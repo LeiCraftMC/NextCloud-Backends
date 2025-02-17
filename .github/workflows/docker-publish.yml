@@ -23,7 +23,7 @@ env:
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: leicraftmc/nextcloud-hpb
-
+  IMAGE_TAG: talk
 
 jobs:
   build:
