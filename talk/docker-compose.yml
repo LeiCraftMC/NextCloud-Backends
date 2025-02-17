@@ -20,7 +20,7 @@ services:
       TALK_HOST: YOUR_TALK_HOSTNAME              # hostname of your talk instance (e.g. turn.example.com)
       TURN_SECRET: YOUR_TURN_SECRET              # secret for your turn server
       TALK_PORT: 3478                            # port of your turn server 
-      INTERNAL_SECRET: YOUR_INTERNAL_SECRET     # secret for internal communication
+      INTERNAL_SECRET: YOUR_INTERNAL_SECRET      # secret for internal communication
     restart: unless-stopped
     read_only: true
     tmpfs:
