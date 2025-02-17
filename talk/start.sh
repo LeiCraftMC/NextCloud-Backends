@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Variables
-if [ -z "$TURN_SECRET" ]; then
-    echo "You need to provide the TURN_SECRET."
+if [ -z "$TALK_HOST" ]; then
+    echo "You need to provide the TALK_PORT."
     exit 1
-elif [ -z "$SIGNALING_SECRET" ]; then
-    echo "You need to provide the SIGNALING_SECRET."
+elif [ -z "$TURN_SECRET" ]; then
+    echo "You need to provide the TURN_SECRET."
     exit 1
 elif [ -z "$INTERNAL_SECRET" ]; then
     echo "You need to provide the INTERNAL_SECRET."
