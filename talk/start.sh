@@ -1,13 +1,7 @@
 #!/bin/bash
 
 # Variables
-if [ -z "$NC_DOMAIN" ]; then
-    echo "You need to provide the NC_DOMAIN."
-    exit 1
-elif [ -z "$TALK_PORT" ]; then
-    echo "You need to provide the TALK_PORT."
-    exit 1
-elif [ -z "$TURN_SECRET" ]; then
+if [ -z "$TURN_SECRET" ]; then
     echo "You need to provide the TURN_SECRET."
     exit 1
 elif [ -z "$SIGNALING_SECRET" ]; then
@@ -44,10 +38,10 @@ cat << TURN_CONF > "/conf/eturnal.yml"
 eturnal:
   listen:
     - ip: "$IP_BINDING"
-      port: $TALK_PORT
+      port: 3478
       transport: udp
     - ip: "$IP_BINDING"
-      port: $TALK_PORT
+      port: 3478
       transport: tcp
   log_dir: stdout
   log_level: warning

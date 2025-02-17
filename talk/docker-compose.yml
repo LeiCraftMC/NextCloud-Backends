@@ -11,15 +11,14 @@ services:
       start_interval: 5s
       retries: 3
     ports:
-      - ${TALK_PORT}:${TALK_PORT}/tcp
-      - ${TALK_PORT}:${TALK_PORT}/udp
-      - "8081:8081/tcp"
+      - 3478:3478/tcp
+      - 3478:3478/udp
+      - 8081:8081/tcp
     environment:
       NC_DOMAIN_0: YOUR_NEXTCLOUD_DOMAIN         # domain of your nextcloud instance (e.g. cloud.example.com)
       SIGNALING_SECRET_0: YOUR_SIGNALING_SECRET  # secret for your signaling server for cloud.example.com
       TALK_HOST: YOUR_TALK_HOSTNAME              # hostname of your talk instance (e.g. turn.example.com)
       TURN_SECRET: YOUR_TURN_SECRET              # secret for your turn server
-      TALK_PORT: 3478                            # port of your turn server 
       INTERNAL_SECRET: YOUR_INTERNAL_SECRET      # secret for internal communication
     restart: unless-stopped
     read_only: true
