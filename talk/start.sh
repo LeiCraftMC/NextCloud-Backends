@@ -117,7 +117,7 @@ blockkey = $(openssl rand -hex 16)
 [clients]
 internalsecret = ${INTERNAL_SECRET}
 
-$BACKEND_CONFIG
+$(echo -e $BACKEND_CONFIG)
 
 [nats]
 url = nats://127.0.0.1:4222
